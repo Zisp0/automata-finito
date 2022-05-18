@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     {% load static %}
     <meta charset="UTF-8">
@@ -16,7 +16,7 @@
 </head>
 <body>
     <div class="container-md py-3">
-        <h1 class="titulo"> Automata finito</h1>
+        <h1 class="titulo"> Autómata finito</h1>
         <h6 class="creditos">Por: Faiber Hernández y César Torres</h6>
         <div class="card text-center">
             <div class="card-header">
@@ -24,14 +24,13 @@
                     <input id = "expresion" type="text" class="w-50 mt-2" placeholder="Por favor ingrese aquí la palabra a validar...">
                     <button id = "btnVerificar" class="btn btn btn-outline-info  mt-2" type="button">Verificar</button>
                     
-
                     <div class="form-floating ms-3 mt-2">
                         <select class="form-select" id="speed"  onchange="deselect()" onmouseleave="deselect()">
                             <option id="instant" value="1">Inmediato</option>
                             <option id="rapid" value="2">Rapido</option>
-                            <option id="slow" value="2">Lento</option>
+                            <option id="slow" value="3">Lento</option>
                         </select>
-                        <label for="speed">velocidad</label>
+                        <label id="velocidad" for="speed">velocidad</label>
                     </div>
 
                     <div class="form-floating ms-3  mt-2">
@@ -39,18 +38,26 @@
                             <option id="ES" value="1">Español</option>
                             <option id="EN" value="2">Inglés</option>
                         </select>
-                        <label for="language">Lenguaje</label>
+                        <label id="lenguaje" for="language">Lenguaje</label>
                     </div>
                 </div>
             </div>
-            <div class="card-body">
-                
+
+            <div class="card-body deladito">
+                <h3 id="leido">Leido:</h3> <p>&nbsp</p>
+                <div id="letras"></div>
             </div>
             
             <div id="myDiagramDiv" class="diagrama"></div>
+
+            <select class="form-select" id="langDefault">
+            </select>
+
         </div>
     </div>
     <script src="https://unpkg.com/gojs/release/go-debug.js"></script>
+    <script src="{% static 'AutomataApp/js/tts.js' %}"></script>
+    <script src="{% static 'AutomataApp/js/langs.js' %}"></script>
     <script src="{% static 'AutomataApp/js/main.js' %}"></script>
     <script src="{% static 'AutomataApp/js/pythont.js' %}"></script>
 </body>

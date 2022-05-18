@@ -33,3 +33,11 @@ body{
     border-color: #726eff;
 }
 
+.deladito{
+    display: flex;
+    text-align: left;
+}
+
+.deladito h3{
+    display: inline
+}
