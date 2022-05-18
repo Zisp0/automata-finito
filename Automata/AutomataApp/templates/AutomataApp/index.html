@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'AutomataApp/css/styles.css' %}">
+    <script src="{% static 'AutomataApp/js/jquery-3.6.0.min.js' %}"></script>
+    <title>Automata</title>
+</head>
+<body>
+    <div class="container-md py-3">
+        <h1 class="titulo"> Automata finito</h1>
+        <h6 class="creditos">Por: Faiber Hernández y César Torres</h6>
+        <div class="card text-center">
+            <div class="card-header">
+                <div class="input-group">
+                    <input id = "expresion" type="text" class="w-50 mt-2" placeholder="Por favor ingrese aquí la palabra a validar...">
+                    <button id = "btnVerificar" class="btn btn btn-outline-info  mt-2" type="button">Verificar</button>
+                    
+
+                    <div class="form-floating ms-3 mt-2">
+                        <select class="form-select" id="speed"  onchange="deselect()" onmouseleave="deselect()">
+                            <option id="instant" value="1">Inmediato</option>
+                            <option id="rapid" value="2">Rapido</option>
+                            <option id="slow" value="2">Lento</option>
+                        </select>
+                        <label for="speed">velocidad</label>
+                    </div>
+
+                    <div class="form-floating ms-3  mt-2">
+                        <select class="form-select" id="language"  onchange="deselect()" onmouseleave="deselect()">
+                            <option id="ES" value="1">Español</option>
+                            <option id="EN" value="2">Inglés</option>
+                        </select>
+                        <label for="language">Lenguaje</label>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                
+            </div>
+            
+            <div id="myDiagramDiv" class="diagrama"></div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/gojs/release/go-debug.js"></script>
+    <script src="{% static 'AutomataApp/js/main.js' %}"></script>
+    <script src="{% static 'AutomataApp/js/pythont.js' %}"></script>
+</body>
+</html>

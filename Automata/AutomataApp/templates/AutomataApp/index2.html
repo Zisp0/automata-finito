@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load static %}
+
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Automata</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel='stylesheet' href="{% static 'AutomataApp/css/main.css' %}">
+        
+    </head>
+    <body>
+        <div id="myDiagramDiv" class="diagrama"></div>
+        <button onclick="color()">aja</button>
+        <script src="https://unpkg.com/gojs/release/go-debug.js"></script>
+        <script src="{% static 'AutomataApp/js/main.js' %}"></script>
+    </body>
+</html>

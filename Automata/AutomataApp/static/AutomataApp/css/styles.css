@@ -1,0 +1,35 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.diagrama{
+    width: 100%; 
+    height:400px; 
+    background-color: #DAE4E4;
+}
+
+body{
+    background-color:#212b38;
+}
+
+.titulo{
+    color:#08c6ab;
+}
+
+.creditos{
+    color:#5afff7; 
+}
+
+.btn-outline-info{
+    color: #726eff;
+    border-color: #726eff;
+}
+
+.btn-outline-info:hover{
+    background-color: #726eff;
+    color: white;
+    border-color: #726eff;
+}
+
